@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gallery</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+            <div class="px-6 w-full flex flex-wrap items-center justify-between">
+                <div class="flex items-center">
+                    <button
+                        class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContentY"
+                        aria-controls="navbarSupportedContentY"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            class="w-5"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                    <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                                href="#!"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                                >Gallery</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Jumbotron -->
+        <div class="text-center bg-gray-50 text-gray-800 py-20 px-6">
+            <h1 class="max-sm:text-2xl max-lg:mb-8 text-5xl font-bold mt-0 mb-1">Welcome To My Gallery</h1>
+
+            <section class="overflow-hidden text-gray-700">
+                <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+                    <div class="flex flex-wrap -m-1 md:-m-2">
+                        <div class="flex flex-wrap w-full">
+                            <div class="w-2/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(1).webp"
+                                    onclick="showModal(1)"
+                                />
+                            </div>
+                            <div class="w-1/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(2).webp"
+                                    onclick="showModal(2)"
+                                />
+                            </div>
+                            <div class="w-2/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(3).webp"
+                                    onclick="showModal(3)"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap w-full h-56">
+                            <div class="w-full p-1 md:p-2 h-full relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(4).webp"
+                                    onclick="showModal(4)"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap w-1/2">
+                            <div class="w-full p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(5).webp"
+                                    onclick="showModal(5)"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap w-1/2">
+                            <div class="w-full p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(6).webp"
+                                    onclick="showModal(6)"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap w-full">
+                            <div class="w-1/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(7).webp"
+                                    onclick="showModal(7)"
+                                />
+                            </div>
+                            <div class="w-1/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(8).webp"
+                                    onclick="showModal(8)"
+                                />
+                            </div>
+                            <div class="w-1/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(9).webp"
+                                    onclick="showModal(9)"
+                                />
+                            </div>
+                            <div class="w-1/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(10).webp"
+                                    onclick="showModal(10)"
+                                />
+                            </div>
+                            <div class="w-1/5 p-1 md:p-2 relative overflow-hidden bg-no-repeat bg-cover">
+                                <img
+                                    alt="gallery"
+                                    class="block object-cover object-center w-full h-full rounded-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(11).webp"
+                                    onclick="showModal(11)"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Jumbotron -->
+
+        <!-- Modal -->
+        <div
+            id="modal"
+            class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center"
+        >
+            <a
+                class="fixed top-6 right-8 text-gray-800 text-5xl font-bold hover:text-gray-800"
+                href="javascript:void(0)"
+                onclick="closeModal()"
+                >&times;</a
+            >
+
+            <a
+                class="fixed sm:left-6 left-8 px-4 text-gray-800 cursor-pointer text-5xl font-bold hover:text-gray-800"
+                onclick="prev()"
+                >❮</a
+            >
+            <a
+                class="fixed sm:right-8 right-8 px-4 text-gray-800 cursor-pointer text-5xl font-bold hover:text-gray-800"
+                onclick="next()"
+                >❯</a
+            >
+
+            <div class="flex justify-center">
+                <div class="flex flex-col max-w-5xl shadow-lg">
+                    <img id="modal-img" class="w-full h-96 h-auto object-cover max-w-7xl" alt="" />
+                    <div class="p-6 flex flex-col items-center -mt-8 bg-white rounded-tl-3xl">
+                        <h5 id="modal-title" class="text-gray-900 text-xl font-medium mb-2 content-center"></h5>
+                        <p id="modal-desc" class="text-gray-700 text-base mb-4"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+
+        <script src="func.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    </body>
+</html>
